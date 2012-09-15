@@ -10,8 +10,8 @@ import sys
 # am I on OSX or Linux?
 uname = os.uname()[0]
 if uname == 'Linux':
-	cmd_start_screensaver = 'gnome-screensaver-command -l'
-	cmd_pause_music = 'ps -C banshee > /dev/null && banshee --pause'
+	cmd_start_screensaver = 'xflock4'
+	cmd_pause_music = 'pgrep mpd > /dev/null && mpc pause'
 elif uname == 'Darwin':
 	# pause iTunes (note that this always pauses; if it's not playing, it has no effect).
 	# it's kinda ugly; if iTunes isn't already running, osascript will start it, then dutifully
