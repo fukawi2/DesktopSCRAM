@@ -31,7 +31,7 @@ while True:
 	try:
 		print "Trying to open a connection..."
 		# Open the serial device; this is the specific USB/Serial adapter model I'm using
-		s = serial.Serial('/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller-if00-port0')
+		s = serial.Serial('/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A400C1SY-if00-port0')
 		print "Got!"
 		while True:
 			print "Waiting for DTR change..."
