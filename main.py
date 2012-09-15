@@ -35,7 +35,7 @@ while True:
 		print "Got!"
 		while True:
 			print "Waiting for DTR change..."
-			fcntl.ioctl(s.fd, termios.TIOCMIWAIT, (termios.TIOCM_DSR))
+			fcntl.ioctl(s.fd, termios.TIOCMIWAIT, (termios.TIOCM_CTS))
 			# Debounce.
 			# (Also ignores events in the first 2s of runtime)
 			if time.time() - last_event < 2:
